@@ -71,22 +71,16 @@ transify/
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
+| Backend - Node.js, Express.js |
+| Database - MongoDB, Mongoose |
+| Real-time - Socket.IO |
+| Auth - JWT, bcryptjs |
+| Scheduling - node-cron |
+| Frontend - React, Vite |
 
-| Layer | Technology |
-|---|---|
-| Backend | Node.js, Express.js |
-| Database | MongoDB, Mongoose |
-| Real-time | Socket.IO |
-| Auth | JWT, bcryptjs |
-| Scheduling | node-cron |
-| Frontend | React, Vite |
-| Charts | Recharts |
-| HTTP Client | Axios |
 
----
-
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js v18+
@@ -132,7 +126,6 @@ npm run dev
 
 Frontend runs at: `http://localhost:3000`
 
----
 
 ## 🔐 Demo Credentials
 
@@ -141,7 +134,6 @@ Frontend runs at: `http://localhost:3000`
 | Traveller | user@transit.in | user1234 |
 | Scheduler | scheduler@transit.in | sched1234 |
 
----
 
 ## 🗺️ Sample Data — Indian Routes
 
@@ -153,59 +145,3 @@ Frontend runs at: `http://localhost:3000`
 | CHN-01 | Chennai MTC | Bus | Chennai Central → Tambaram |
 | HYD-01 | Hyderabad MMTS | Train | Lingampally → Falaknuma |
 | JAI-01 | Jaipur Low Floor Bus | Bus | Sindhi Camp → Mansarovar |
-
----
-
-## 📡 API Endpoints
-
-### Auth
-| Method | Endpoint | Access |
-|---|---|---|
-| POST | /api/auth/register | Public |
-| POST | /api/auth/login | Public |
-| GET | /api/auth/me | Protected |
-
-### Routes
-| Method | Endpoint | Access |
-|---|---|---|
-| GET | /api/routes | Public |
-| POST | /api/routes | Scheduler |
-| DELETE | /api/routes/:routeNumber | Scheduler |
-
-### Vehicles
-| Method | Endpoint | Access |
-|---|---|---|
-| GET | /api/vehicles | Public |
-| POST | /api/vehicles | Scheduler |
-| PUT | /api/vehicles/:id/location | Scheduler |
-| DELETE | /api/vehicles/:id | Scheduler |
-
-### Bookings
-| Method | Endpoint | Access |
-|---|---|---|
-| GET | /api/bookings/my | Traveller |
-| POST | /api/bookings | Traveller |
-| PATCH | /api/bookings/:id/cancel | Traveller |
-| GET | /api/bookings | Scheduler |
-
-### Predictions
-| Method | Endpoint | Access |
-|---|---|---|
-| GET | /api/predictions/summary | Public |
-| GET | /api/predictions/delay/:vehicleId | Public |
-| GET | /api/predictions/optimal-schedule/:routeNumber | Public |
-
----
-
-## 🔄 Real-time Events (Socket.IO)
-
-| Event | Description |
-|---|---|
-| `vehicle-location-update` | Emitted every 10s with lat/lng and speed |
-| `occupancy-update` | Emitted when vehicle occupancy changes |
-| `schedule-update` | Emitted when a stop status is updated |
-
----
-
-## 📄 License
-MIT
